@@ -1,0 +1,33 @@
+html {
+  font-size: 1em;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+
+  font-family: 'Roboto', 'Times', sans-serif;
+  font-size: 1rem;
+  line-height: 1.125;
+  font-weight: 400;
+  color: #151618;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 700;
+}
