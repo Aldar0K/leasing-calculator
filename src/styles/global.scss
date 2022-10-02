@@ -5,29 +5,50 @@ html {
 }
 
 body {
-  background-color: #FFFFFF;
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
 
-  font-family: 'Roboto', 'Times', sans-serif;
-  font-size: 1rem;
-  line-height: 1.125;
-  font-weight: 400;
-  color: #151618;
+  color: #333E48;
 }
 
 h1 {
-  font-size: 2rem;
-  line-height: 2.2rem;
-  font-weight: 700;
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 90%;
+
+  color: #111111;
 }
 
-h2 {
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  font-weight: 700;
+.wrapper {
+  display: flex;
+  min-height: 100%;
+
+  flex-direction: column;
+
+  overflow: hidden;
 }
 
-h3 {
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  font-weight: 700;
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 47px;
+
+  max-width: 1346px;
+}
+
+.header__container {
+  padding-top: 213px;
+  margin-bottom: 32px;
+}
+
+.header__title {
+  max-width: 753px;
 }
