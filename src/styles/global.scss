@@ -39,16 +39,19 @@ h1 {
 
 .container {
   margin: 0 auto;
-  padding: 0 47px;
 
   max-width: 1346px;
 }
 
 .header__container {
-  padding-top: 213px;
+  padding: 213px 47px 0;
   margin-bottom: 32px;
 }
 
 .header__title {
   max-width: 753px;
+}
+
+.main__container {
+  padding: 0 47px;
 }

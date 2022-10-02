@@ -1,0 +1,47 @@
+.price {
+  display: flex;
+
+  flex-direction: column;
+  gap: 24px;
+}
+
+.price__title {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #575757;
+}
+
+.price__field {
+  display: flex;
+
+  padding: 16px 24px;
+
+  height: 68px;
+  width: 427px;
+
+  justify-content: space-between;
+
+  background: #F3F3F4;
+  border-radius: 16px;
+}
+
+.price__input,
+.price__rub {
+  background: transparent;
+
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #575757;
+}
+
+.price__input {
+  max-width: 359px;
+}
