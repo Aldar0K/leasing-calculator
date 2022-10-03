@@ -7,10 +7,12 @@ const Calculator: FC = () => {
   // const [initial, setInitial] = useState<number>(13);
   // const [months, setMonths] = useState<number>(60);
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   const handlePriceChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
-    if (Object.is(value, NaN)) {
-      console.log('NaN');
+    if (Object.is(value, NaN) || value < 0 || value > 6000000) {
+      console.log('Not valid');
     } else {
       setPrice(value);
     }
@@ -19,7 +21,7 @@ const Calculator: FC = () => {
   return (
     <div className="calcualator">
       <div className="calcualator__fields">
-        <PriceField value={price} onChange={handlePriceChange} />
+        <PriceField value={price} onChange={handlePriceChange} isDisabled={loading} />
         {/* <InitialField value={initial} /> */}
         {/* <MonthsField value={months} /> */}
       </div>
