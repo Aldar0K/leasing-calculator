@@ -11,7 +11,7 @@ interface InitialFieldProps {
 const InitialField: FC<InitialFieldProps> = ({ value, percent, isDisabled, onChange }) => {
   return (
     <div className="calcualator__field initial">
-      <div className="initial__title">Первоначальный взнос</div>
+      <div className="calculator__title">Первоначальный взнос</div>
       <div className="initial__field">
         <input
           className="initial__input"
@@ -20,7 +20,7 @@ const InitialField: FC<InitialFieldProps> = ({ value, percent, isDisabled, onCha
           value={value}
           onChange={onChange}
         />
-        <span className="initial__percent">{`${percent}%`}</span>
+        <span className="initial__measure">{`${percent}%`}</span>
         <input
           className="initial__slider"
           disabled={isDisabled}

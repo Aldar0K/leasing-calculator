@@ -10,7 +10,7 @@ interface PriceFieldProps {
 const PriceField: FC<PriceFieldProps> = ({ value, isDisabled, onChange }) => {
   return (
     <div className="calcualator__field price">
-      <div className="price__title">Стоимость автомобиля</div>
+      <div className="calculator__title">Стоимость автомобиля</div>
       <div className="price__field">
         <input
           className="price__input"
@@ -19,7 +19,7 @@ const PriceField: FC<PriceFieldProps> = ({ value, isDisabled, onChange }) => {
           value={value}
           onChange={onChange}
         />
-        <span className="price__rub">₽</span>
+        <span className="price__measure">₽</span>
         <input
           className="price__slider"
           disabled={isDisabled}

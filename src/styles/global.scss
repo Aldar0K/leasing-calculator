@@ -94,14 +94,6 @@ input[type="range"] {
   &:focus {
     outline: none;
   }
-
-  &:focus::-webkit-slider-thumb {
-
-  }
-  
-  &:focus::-moz-range-thumb {
-
-  }
 }
 
 .wrapper {
