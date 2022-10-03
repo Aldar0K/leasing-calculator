@@ -1,4 +1,4 @@
-.price__title {
+.initial__title {
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 400;
@@ -8,7 +8,7 @@
   color: #575757;
 }
 
-.price__field {
+.initial__field {
   position: relative;
   display: flex;
 
@@ -18,21 +18,23 @@
   border-radius: 16px;
 }
 
-.price__input {
+.initial__input {
   height: 100%;
   width: 100%;
 
-  padding: 16px 24px;
+  padding: 7px 7px 7px 24px;
+
+  background: transparent;
 
   &:focus {
     background-color: #FFFFFF;
     border: 2px solid #F3F3F4;
     border-radius: 16px;
 
-    & ~ .price__slider::-webkit-slider-runnable-track {
+    & ~ .initial__slider::-webkit-slider-runnable-track {
       height: 1px;
     }
-    & ~ .price__slider::-moz-range-track {
+    & ~ .initial__slider::-moz-range-track {
       height: 1px;
     }
   }
@@ -40,36 +42,44 @@
   &:disabled {
     opacity: 0.5;
 
-    & ~ .price__rub {
+    & ~ .initial__rub {
       opacity: 0.5;
     }
-    & ~ .price__slider {
+    & ~ .initial__slider {
       opacity: 0.5;
     }
   }
 }
 
-.price__rub {
+.initial__percent {
   position: absolute;
+  padding: 15px 17px;
 
-  top: 16px;
-  right: 24px;
+  top: 7px;
+  right: 7px;
+
+  background: #EBEBEC;
+  border-radius: 16px;
+
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: right;
+
+  color: #575757;
 }
 
-.price__input,
-.price__rub {
-  background: transparent;
-
+.initial__input {
   font-family: 'Nekst';
   font-style: normal;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
-
-  color: #575757;
 }
 
-.price__slider {
+.initial__slider {
   position: absolute;
 
   bottom: 0;

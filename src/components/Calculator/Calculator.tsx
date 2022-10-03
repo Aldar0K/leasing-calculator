@@ -1,10 +1,12 @@
+import InitialField from 'components/InitialField';
 import PriceField from 'components/PriceField';
 import React, { useState, FC, ChangeEvent } from 'react';
 import './Calculator.scss';
 
 const Calculator: FC = () => {
   const [price, setPrice] = useState<number>(3300000);
-  // const [initial, setInitial] = useState<number>(13);
+  const [percent, setInitial] = useState<number>(13);
+  const initial = Math.floor((price / 100) * percent);
   // const [months, setMonths] = useState<number>(60);
 
   const [loading, setLoading] = useState<boolean>(false);
@@ -18,12 +20,30 @@ const Calculator: FC = () => {
     }
   };
 
+  const handleInitialChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = Number(e.target.value);
+    if (Object.is(value, NaN) || value < 0 || value > 60) {
+      console.log('Not valid');
+    } else {
+      if (value < 10) {
+        setInitial(10);
+      } else {
+        setInitial(value);
+      }
+    }
+  };
+
   return (
     <div className="calcualator">
       <div className="calcualator__fields">
         <PriceField value={price} onChange={handlePriceChange} isDisabled={loading} />
-        {/* <InitialField value={initial} /> */}
-        {/* <MonthsField value={months} /> */}
+        <InitialField
+          value={initial}
+          percent={percent}
+          onChange={handleInitialChange}
+          isDisabled={loading}
+        />
+        {/* <MonthsField value={price} onChange={handlePriceChange} isDisabled={loading} /> */}
       </div>
       <div className="calcualator__bottom">
         <div className="calcualator__sum"></div>

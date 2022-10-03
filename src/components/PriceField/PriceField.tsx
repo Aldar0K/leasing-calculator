@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC } from 'react';
+import React, { FC, ChangeEvent } from 'react';
 import './PriceField.scss';
 
 interface PriceFieldProps {
@@ -9,7 +9,7 @@ interface PriceFieldProps {
 
 const PriceField: FC<PriceFieldProps> = ({ value, isDisabled, onChange }) => {
   return (
-    <div className="calcualator__price price">
+    <div className="calcualator__field price">
       <div className="price__title">Стоимость автомобиля</div>
       <div className="price__field">
         <input
