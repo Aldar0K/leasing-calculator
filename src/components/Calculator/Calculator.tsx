@@ -1,9 +1,10 @@
+import React, { useState, FC, ChangeEvent } from 'react';
+import './Calculator.scss';
 import { INTEREST_RATE } from 'components/constants';
 import InitialField from 'components/InitialField';
 import MonthsField from 'components/MonthsField';
 import PriceField from 'components/PriceField';
-import React, { useState, FC, ChangeEvent } from 'react';
-import './Calculator.scss';
+import CalcButton from 'components/CalcButton';
 
 const Calculator: FC = () => {
   const [price, setPrice] = useState<number>(3300000);
@@ -15,7 +16,7 @@ const Calculator: FC = () => {
 
   const handlePriceChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
-    if (Object.is(value, NaN) || value < 0 || value > 6000000) {
+    if (Object.is(value, NaN) || value < 1 || value > 6000000) {
       console.log('Not valid');
     } else {
       setPrice(value);
@@ -24,7 +25,7 @@ const Calculator: FC = () => {
 
   const handleInitialChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
-    if (Object.is(value, NaN) || value < 0 || value > 60) {
+    if (Object.is(value, NaN) || value < 1 || value > 60) {
       console.log('Not valid');
     } else {
       if (value < 10) {
@@ -37,11 +38,19 @@ const Calculator: FC = () => {
 
   const handleMonthsChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
-    if (Object.is(value, NaN) || value < 0 || value > 60) {
+    if (Object.is(value, NaN) || value < 1 || value > 60) {
       console.log('Not valid');
     } else {
       setMonths(value);
     }
+  };
+
+  const handleButtonClick = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   };
 
   const monthPay = Math.round(
@@ -73,7 +82,7 @@ const Calculator: FC = () => {
           <div className="calculator__title">Ежемесячный платеж от</div>
           <h2 className="calculator__price">{monthPay.toLocaleString('ru')}</h2>
         </div>
-        <button className="calculator__button">Оставить заявку</button>
+        <CalcButton onClick={handleButtonClick} isLoading={loading} />
       </div>
     </div>
   );

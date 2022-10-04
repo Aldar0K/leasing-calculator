@@ -6,6 +6,10 @@
 
   background: #F3F3F4;
   border-radius: 16px;
+
+  &:disabled {
+
+  }
 }
 
 .price__input {
@@ -30,7 +34,7 @@
   &:disabled {
     opacity: 0.5;
 
-    & ~ .price__rub {
+    & ~ .price__measure {
       opacity: 0.5;
     }
     & ~ .price__slider {

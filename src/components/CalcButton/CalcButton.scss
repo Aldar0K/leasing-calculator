@@ -1,0 +1,29 @@
+.calculator__button {
+  padding: 14px 92.5px 18px;
+
+  max-width: 426px;
+  height: 68px;
+
+  background: #FF9514;
+  border-radius: 40px;
+
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #FFFFFF;
+
+  transition: all .2s ease;
+
+  &:hover {
+    background: #111111;
+  }
+  &:active {
+    background: #575757;;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}

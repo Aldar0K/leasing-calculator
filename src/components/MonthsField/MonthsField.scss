@@ -42,7 +42,7 @@
   &:disabled {
     opacity: 0.5;
 
-    & ~ .months__rub {
+    & ~ .months__measure {
       opacity: 0.5;
     }
     & ~ .months__slider {
