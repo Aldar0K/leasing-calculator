@@ -16,7 +16,7 @@ const MonthsField: FC<MonthsFieldProps> = ({ value, isDisabled, onChange }) => {
           className="months__input"
           disabled={isDisabled}
           type="text"
-          value={value}
+          value={value.toLocaleString('ru')}
           onChange={onChange}
         />
         <span className="months__measure">мес.</span>

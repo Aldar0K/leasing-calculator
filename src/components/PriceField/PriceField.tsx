@@ -16,7 +16,7 @@ const PriceField: FC<PriceFieldProps> = ({ value, isDisabled, onChange }) => {
           className="price__input"
           disabled={isDisabled}
           type="text"
-          value={value}
+          value={value.toLocaleString('ru')}
           onChange={onChange}
         />
         <span className="price__measure">₽</span>

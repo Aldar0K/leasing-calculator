@@ -1,1 +1,1 @@
-export const INTEREST_RATE = 3.5;
+export const INTEREST_RATE = 0.035;

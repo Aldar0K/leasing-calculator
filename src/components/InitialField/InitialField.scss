@@ -22,9 +22,17 @@
   height: 100%;
   width: 100%;
 
-  padding: 7px 7px 7px 24px;
+  padding: 16px 7px 16px 24px;
 
   background: transparent;
+
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #575757;
 
   &:focus {
     background-color: #FFFFFF;
@@ -62,7 +70,6 @@
   border-radius: 16px;
 }
 
-.initial__input,
 .initial__measure {
   font-family: 'Nekst';
   font-style: normal;
@@ -71,14 +78,6 @@
   line-height: 120%;
 
   color: #575757;
-}
-
-.initial__input {
-  font-family: 'Nekst';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
 }
 
 .initial__slider {

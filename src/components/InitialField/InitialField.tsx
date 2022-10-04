@@ -17,7 +17,7 @@ const InitialField: FC<InitialFieldProps> = ({ value, percent, isDisabled, onCha
           className="initial__input"
           disabled={isDisabled}
           type="text"
-          value={value}
+          value={value.toLocaleString('ru') + ' ₽'}
           onChange={onChange}
         />
         <span className="initial__measure">{`${percent}%`}</span>
