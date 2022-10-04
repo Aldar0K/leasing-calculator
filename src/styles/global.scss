@@ -127,6 +127,11 @@ input[type="range"] {
     padding: 100px 48px 0;
     margin-bottom: 44px;
   }
+
+  @media (max-width: 768px) {
+    padding: 64px 36px 0;
+    margin-bottom: 44px;
+  }
 }
 
 .header__title {
@@ -138,5 +143,9 @@ input[type="range"] {
 
   @media (max-width: 1024px) {
     padding: 0 48px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 36px;
   }
 }
