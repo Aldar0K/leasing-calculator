@@ -34,7 +34,7 @@ input[type="range"] {
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
-  background: #E1E1E1;
+  background: transparent;
 
   cursor: pointer;
 
@@ -114,8 +114,14 @@ input[type="range"] {
 
   max-width: 1440px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     max-width: 1024px;
+  }
+  @media (max-width: 1023px) {
+    max-width: 768px;
+  }
+  @media (max-width: 767px) {
+    max-width: 320px;
   }
 }
 
@@ -123,29 +129,47 @@ input[type="range"] {
   padding: 213px 47px 0;
   margin-bottom: 32px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     padding: 100px 48px 0;
     margin-bottom: 44px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     padding: 64px 36px 0;
     margin-bottom: 44px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 44px 21px 0;
+    margin-bottom: 32px;
   }
 }
 
 .header__title {
   max-width: 753px;
+
+  @media (max-width: 767px) {
+    max-width: 220px;
+
+    font-size: 34px;
+    line-height: 31px;
+
+    color: #111111;
+  }
 }
 
 .main__container {
   padding: 0 47px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     padding: 0 48px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     padding: 0 36px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
   }
 }

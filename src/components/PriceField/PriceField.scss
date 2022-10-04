@@ -57,6 +57,13 @@
   line-height: 36px;
 
   color: #575757;
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+    line-height: 20px;
+
+    color: #333E48;
+  }
 }
 
 .price__slider {
@@ -65,4 +72,9 @@
   bottom: 0;
   left: 24px;
   right: 24px;
+
+  @media (max-width: 767px) {
+    left: 20px;
+    right: 20px;
+  }
 }

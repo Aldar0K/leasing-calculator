@@ -26,7 +26,14 @@
     opacity: 0.5;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1439px) {
     max-width: 345px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 280px;
+
+    font-size: 22px;
+    line-height: 20px;
   }
 }

@@ -59,14 +59,13 @@
   line-height: 36px;
 
   color: #575757;
-}
 
-.months__input {
-  font-family: 'Nekst';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 36px;
+  @media (max-width: 767px) {
+    font-size: 22px;
+    line-height: 20px;
+
+    color: #333E48;
+  }
 }
 
 .months__slider {
@@ -75,4 +74,9 @@
   bottom: 0;
   left: 24px;
   right: 24px;
+
+  @media (max-width: 767px) {
+    left: 20px;
+    right: 20px;
+  }
 }
