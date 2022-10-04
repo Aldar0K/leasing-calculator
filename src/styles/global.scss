@@ -122,6 +122,11 @@ input[type="range"] {
 .header__container {
   padding: 213px 47px 0;
   margin-bottom: 32px;
+
+  @media (max-width: 1024px) {
+    padding: 100px 48px 0;
+    margin-bottom: 44px;
+  }
 }
 
 .header__title {
@@ -130,4 +135,8 @@ input[type="range"] {
 
 .main__container {
   padding: 0 47px;
+
+  @media (max-width: 1024px) {
+    padding: 0 48px;
+  }
 }

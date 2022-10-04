@@ -88,7 +88,9 @@ const Calculator: FC = () => {
           <div className="calculator__title">Ежемесячный платеж от</div>
           <h2 className="calculator__price">{monthPay.toLocaleString('ru')}</h2>
         </div>
-        <CalcButton onClick={handleButtonClick} isLoading={loading} />
+        <div className="calcualator__button">
+          <CalcButton onClick={handleButtonClick} isLoading={loading} />
+        </div>
       </div>
     </div>
   );

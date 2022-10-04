@@ -3,6 +3,10 @@
 
   flex-direction: column;
   gap: 44px;
+
+  @media (max-width: 1024px) {
+    gap: 37px;
+  }
 }
 
 .calculator__title {
@@ -37,8 +41,14 @@
 .calcualator__bottom {
   display: flex;
 
+  flex-wrap: wrap;
   align-items: flex-end;
-  gap: 32px;
+  column-gap: 32px;
+  row-gap: 44px;
+
+  @media (max-width: 1024px) {
+    column-gap: 0px;
+  }
 }
 
 .calcualator__sum,
@@ -49,6 +59,18 @@
 
   flex-direction: column;
   gap: 8px;
+
+  @media (max-width: 1024px) {
+    flex-basis: 50%;
+  }
+}
+
+.calcualator__button {
+  flex: 1;
+
+  @media (max-width: 1024px) {
+    flex-basis: 100%;
+  }
 }
 
 .calculator__price {
@@ -59,8 +81,8 @@
   line-height: 90%;
 
   color: #575757;
-}
 
-.calculator__button {
-  flex: 1;
+  @media (max-width: 1024px) {
+    color: #333333;
+  }
 }

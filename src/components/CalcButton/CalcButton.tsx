@@ -9,7 +9,7 @@ interface CalcButtonProps {
 
 const CalcButton: FC<CalcButtonProps> = ({ isLoading, onClick }) => {
   return (
-    <button disabled={isLoading} onClick={onClick} className="calculator__button button">
+    <button disabled={isLoading} onClick={onClick} className="button">
       {isLoading ? (
         <Loader type="ring" color="white" size={50} className="button__loader" />
       ) : (

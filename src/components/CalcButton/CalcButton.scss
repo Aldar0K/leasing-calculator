@@ -1,8 +1,7 @@
-.calculator__button {
-  padding: 14px 92.5px 18px;
-
-  max-width: 426px;
+.button {
   height: 68px;
+  max-width: 426px;
+  width: 100%;
 
   background: #FF9514;
   border-radius: 40px;
@@ -25,5 +24,9 @@
   }
   &:disabled {
     opacity: 0.5;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 345px;
   }
 }
