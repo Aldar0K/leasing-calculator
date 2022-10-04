@@ -4,6 +4,8 @@
 
   height: 68px;
 
+  flex-direction: column;
+
   background: #F3F3F4;
   border-radius: 16px;
 }
@@ -67,14 +69,12 @@
 }
 
 .price__slider {
-  position: absolute;
+  margin-top: -2px;
+  padding: 0 24px;
 
-  bottom: 0;
-  left: 24px;
-  right: 24px;
+  width: 100%;
 
   @media (max-width: 767px) {
-    left: 20px;
-    right: 20px;
+    padding: 0 20px;
   }
 }
