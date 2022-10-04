@@ -5,6 +5,7 @@ import InitialField from 'components/InitialField';
 import MonthsField from 'components/MonthsField';
 import PriceField from 'components/PriceField';
 import CalcButton from 'components/CalcButton';
+import { sendRequest } from 'components/API';
 
 const Calculator: FC = () => {
   const [price, setPrice] = useState<number>(3300000);
@@ -48,9 +49,14 @@ const Calculator: FC = () => {
   const handleButtonClick = () => {
     setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    sendRequest(price, initial, percent, months, totalSum, monthPay)
+      .then(() => {
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+        throw err;
+      });
   };
 
   const monthPay = Math.round(
@@ -59,7 +65,7 @@ const Calculator: FC = () => {
         (Math.pow(1 + INTEREST_RATE, months) - 1))
   );
 
-  const leasingSum = initial + months * monthPay;
+  const totalSum = initial + months * monthPay;
 
   return (
     <div className="calcualator">
@@ -76,7 +82,7 @@ const Calculator: FC = () => {
       <div className="calcualator__bottom">
         <div className="calcualator__sum">
           <div className="calculator__title">Сумма договора лизинга</div>
-          <h2 className="calculator__price">{leasingSum.toLocaleString('ru')}</h2>
+          <h2 className="calculator__price">{totalSum.toLocaleString('ru')}</h2>
         </div>
         <div className="calcualator__payment">
           <div className="calculator__title">Ежемесячный платеж от</div>
