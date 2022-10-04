@@ -5,9 +5,10 @@ interface PriceFieldProps {
   value: number;
   isDisabled: boolean;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onBlur: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const PriceField: FC<PriceFieldProps> = ({ value, isDisabled, onChange }) => {
+const PriceField: FC<PriceFieldProps> = ({ value, isDisabled, onChange, onBlur }) => {
   return (
     <div className="calcualator__field price">
       <div className="calculator__title">Стоимость автомобиля</div>
@@ -16,8 +17,9 @@ const PriceField: FC<PriceFieldProps> = ({ value, isDisabled, onChange }) => {
           className="price__input"
           disabled={isDisabled}
           type="text"
-          value={value.toLocaleString('ru')}
+          value={value}
           onChange={onChange}
+          onBlur={onBlur}
         />
         <span className="price__measure">₽</span>
         <input

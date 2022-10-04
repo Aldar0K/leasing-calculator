@@ -5,9 +5,10 @@ interface MonthsFieldProps {
   value: number;
   isDisabled: boolean;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onBlur: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const MonthsField: FC<MonthsFieldProps> = ({ value, isDisabled, onChange }) => {
+const MonthsField: FC<MonthsFieldProps> = ({ value, isDisabled, onChange, onBlur }) => {
   return (
     <div className="calcualator__field months">
       <div className="calculator__title">Срок лизинга</div>
@@ -16,8 +17,9 @@ const MonthsField: FC<MonthsFieldProps> = ({ value, isDisabled, onChange }) => {
           className="months__input"
           disabled={isDisabled}
           type="text"
-          value={value.toLocaleString('ru')}
+          value={value}
           onChange={onChange}
+          onBlur={onBlur}
         />
         <span className="months__measure">мес.</span>
         <input
