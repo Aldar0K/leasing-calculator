@@ -10,8 +10,10 @@ import { sendRequest } from 'components/API';
 const Calculator: FC = () => {
   const [price, setPrice] = useState<number>(3300000);
   const [percent, setPercent] = useState<number>(13);
-  const initial = Math.floor((price / 100) * percent);
   const [months, setMonths] = useState<number>(60);
+
+  const defaultInitial = Math.floor((price / 100) * percent);
+  const [initial, setInitial] = useState<number>(defaultInitial);
 
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -34,9 +36,24 @@ const Calculator: FC = () => {
 
   const handleInitialChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
-    if (!(Object.is(value, NaN) || value < 0 || value > 100)) {
-      setPercent(value);
+    if (!Object.is(value, NaN)) {
+      setInitial(value);
+      if (value < 10) {
+        setPercent(10);
+      } else if (value > 60) {
+        setPercent(60);
+      } else {
+        setPercent(value);
+      }
     }
+  };
+
+  const handleInitialFocus = () => {
+    setInitial(percent);
+  };
+
+  const handleInitialBlur = () => {
+    setInitial(defaultInitial);
   };
 
   const handleMonthsChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -70,12 +87,12 @@ const Calculator: FC = () => {
   };
 
   const monthPay = Math.round(
-    (price - initial) *
+    (price - defaultInitial) *
       ((INTEREST_RATE * Math.pow(1 + INTEREST_RATE, months)) /
         (Math.pow(1 + INTEREST_RATE, months) - 1))
   );
 
-  const totalSum = initial + months * monthPay;
+  const totalSum = defaultInitial + months * monthPay;
 
   return (
     <div className="calcualator">
@@ -90,6 +107,8 @@ const Calculator: FC = () => {
           value={initial}
           percent={percent}
           onChange={handleInitialChange}
+          onFocus={handleInitialFocus}
+          onBlur={handleInitialBlur}
           isDisabled={loading}
         />
         <MonthsField
