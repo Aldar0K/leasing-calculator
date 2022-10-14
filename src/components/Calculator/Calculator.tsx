@@ -5,7 +5,7 @@ import InitialField from 'components/InitialField';
 import MonthsField from 'components/MonthsField';
 import PriceField from 'components/PriceField';
 import CalcButton from 'components/CalcButton';
-import { sendRequest } from 'components/API';
+import { sendRequest } from 'API';
 
 const Calculator: FC = () => {
   const [price, setPrice] = useState<number>(3300000);
