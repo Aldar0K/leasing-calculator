@@ -1,0 +1,39 @@
+.button {
+  height: 68px;
+  max-width: 426px;
+  width: 100%;
+
+  background: #FF9514;
+  border-radius: 40px;
+
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #FFFFFF;
+
+  transition: all .2s ease;
+
+  &:hover {
+    background: #111111;
+  }
+  &:active {
+    background: #575757;;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 1439px) {
+    max-width: 345px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 280px;
+
+    font-size: 22px;
+    line-height: 20px;
+  }
+}
