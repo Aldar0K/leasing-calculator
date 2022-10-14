@@ -41,14 +41,12 @@ input[type="range"] {
   &::-webkit-slider-runnable-track {
     height: 2px;
   
-    -webkit-appearance: none;
     background: #FF9514;
     border-radius: 10%;
   }
   &::-moz-range-track {
     height: 2px;
   
-    -webkit-appearance: none;
     background: #FF9514;
     border-radius: 10%;
   }
